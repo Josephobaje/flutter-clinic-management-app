@@ -1,0 +1,1 @@
+import 'package:medicare_ng/logic.dart';import 'package:flutter_test/flutter_test.dart';void main(){test('bill sums items',(){expect(bill(drugs:3500,lab:2000),10500);expect(bill(),5000);});test('queue flow',(){expect(nextStatus('Waiting'),'In consultation');expect(nextStatus('In consultation'),'Done');});test('low medicine',(){expect(meds[1].low,isTrue);});}
